@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once "../clases/consultas.php";
 $obj = new consultas();
 $resul = $obj->MostrarDatos();

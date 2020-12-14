@@ -1,5 +1,4 @@
 <?php
-  session_start();
 require_once "../clases/consultas.php";
   $datos = array($_POST['nombre_usuario'],
                   $_POST['password']);
@@ -7,7 +6,7 @@ require_once "../clases/consultas.php";
         $obj = new consultas();
       if ($datos[0] == '' && $datos[1] == '') {
           echo 4;
-      } else if ($datos[0] == '') {
+      } else if ($datos[0] == ''){
           echo 2;
         }else if($datos[1] == ''){
           echo 3;

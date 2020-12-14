@@ -2,7 +2,6 @@
 require_once "../clases/consultas.php";
 $datos = array($_POST['nombre_usuario'],
                 $_POST['password'],
-                $_POST['foto'],
               $_POST['nombre'],
               $_POST['apellidos'],
               $_POST['fecha_nacimiento'],
@@ -12,7 +11,7 @@ $datos = array($_POST['nombre_usuario'],
 
         $obj = new consultas();
         if ($datos[0] == '' && $datos[1] == '' && $datos[2] == '' && $datos[3] == '' && $datos[4] == '' && $datos[5] == '' && $datos[6] == ''
-        && $datos[7] == '' && $datos[8] == '') {
+        && $datos[7] == '') {
             echo 4;
         } else if($datos[0] == '') {
             echo 2;
@@ -30,9 +29,7 @@ $datos = array($_POST['nombre_usuario'],
             echo 9;
           }else if($datos[7] == ''){
             echo 10;
-          }else if($datos[8] == ''){
-            echo 11;
-          }else {
+          }else{
           echo $obj->insertarUsuario($datos);
         }
 

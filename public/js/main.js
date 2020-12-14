@@ -1,6 +1,7 @@
 
 //Ejecuta cuando haya terminado de cargar el documento
 $(document).ready(function(){
+  $('#cargadatos').load('tabla.php');
     $("#form-login").on('submit',function(evt){
       //quita las variables de la URL
       evt.preventDefault();
@@ -11,7 +12,7 @@ $(document).ready(function(){
         url: "procesos/login.php",
         success:function(r){
           if (r == 1) {
-            window.location.href='vistas/';
+          window.location.href='vistas/';
           }else if (r == 3) {
               alert("Contraseña incorrecta");
             }else if(r == 2){
@@ -43,21 +44,55 @@ $(document).ready(function(){
             }else if(r == 4){
               alert("Llena todos los campos");
             }else if(r == 5){
-              alert("No llenaste foto baboso");
-            }else if(r == 6){
               alert("No llenaste el nombre baboso");
-            }else if(r == 7){
+            }else if(r == 6){
               alert("No llenaste los apellidos baboso");
-            }else if(r == 8){
+            }else if(r == 7){
               alert("No llenaste la fecha de nacimiento");
-            }else if(r == 9){
+            }else if(r == 8){
               alert("No llenaste tu edad huerfano");
-            }else if(r == 10){
+            }else if(r == 9){
               alert("No llenaste el telefono");
-            }else if(r == 11){
+            }else if(r == 10){
               alert("No llenaste el emali hacker");
             }else{
               alert("Error de registro ._.");
+            }
+          }
+      });
+    });
+
+    $("#form-categoria").on('submit',function(evt){
+      //quita las variables de la URL
+      evt.preventDefault();
+      datos = $("#form-categoria").serialize();
+      $.ajax({
+        type: "POST",
+        data: datos,
+        url: "../procesos/registrarCategorias.php",
+        success:function(r){
+          if(r == 1) {
+            alert("Registro Exitoso");
+          }else{
+              alert("Escribe bien pendeje");
+            }
+          }
+      });
+    });
+
+    $("#form-actualizarCategoria").on('submit',function(evt){
+      //quita las variables de la URL
+      evt.preventDefault();
+      datos = $("#form-actualizarCategoria").serialize();
+      $.ajax({
+        type: "POST",
+        data: datos,
+        url: "../procesos/actualizarCategorias.php",
+        success:function(r){
+          if(r == 1) {
+            alert("Registro Exitoso");
+          }else{
+              alert("Escribe bien pendeje");
             }
           }
       });

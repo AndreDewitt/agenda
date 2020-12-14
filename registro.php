@@ -17,8 +17,6 @@
         <input type="text" name="nombre_usuario" id="nombre_usuario">
         <label for="password">Contraseña</label>
         <input type="password" name="password" id="password">
-        <label for="foto">Foto</label>
-        <input type="file" name="foto" id="foto">
         <label for="nombre">Nombre(s)</label>
         <input type="text" name="nombre" id="nombre">
         <label for="apellidos">Apellidos</label>
