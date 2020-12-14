@@ -36,7 +36,6 @@ $(document).ready(function(){
         success:function(r){
           if (r == 1) {
             window.location.href='index.php';
-            alert("Registro de puta madre");
           }else if (r == 3) {
               alert("No llenaste la Contraseña");
             }else if(r == 2){
@@ -72,6 +71,7 @@ $(document).ready(function(){
         url: "../procesos/registrarCategorias.php",
         success:function(r){
           if(r == 1) {
+            $('#cargadatos').load('tabla.php');
             alert("Registro Exitoso");
           }else{
               alert("Escribe bien pendeje");
@@ -83,18 +83,52 @@ $(document).ready(function(){
     $("#form-actualizarCategoria").on('submit',function(evt){
       //quita las variables de la URL
       evt.preventDefault();
-      datos = $("#form-actualizarCategoria").serialize();
+      datos = $(this).serialize();
       $.ajax({
         type: "POST",
         data: datos,
         url: "../procesos/actualizarCategorias.php",
         success:function(r){
           if(r == 1) {
+            $('#cargadatos').load('tabla.php');
             alert("Registro Exitoso");
           }else{
+              console.log(r);
               alert("Escribe bien pendeje");
             }
           }
       });
     });
 });
+
+
+function formActualizar(idCategoria) {
+    $.ajax({
+        type:"POST",
+        data:"idCategoria="+idCategoria,
+        url:"../procesos/obtenerCategoria.php",
+        success:function(r) {
+            datos = jQuery.parseJSON(r);
+            $('#idCategoria').val(datos['id_categoria']);
+            $('#nombre_categoriaA').val(datos['nombre_categoria']);
+            $('#descripcionA').val(datos['descripcion']);
+            $('#colorA').val(datos['color']);
+        }
+    });
+}
+
+function eliminarDatos(idCategoria) {
+    $.ajax({
+        type:"POST",
+        data:"idCategoria="+idCategoria,
+        url:"../procesos/eliminarCategoria.php",
+        success:function(r) {
+          if (r==1) {
+            $('#cargadatos').load('tabla.php');
+            alert("Eliminado correctamente");
+          } else {
+            alert("error al eliminar");
+          }
+        }
+    });
+}
