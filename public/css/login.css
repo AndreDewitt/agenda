@@ -1,0 +1,221 @@
+.circle {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    z-index: -999;
+}
+
+.c_1 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: -100px;
+    background-color: var(--azul);
+}
+
+.c_2 {
+    width: 600px;
+    height: 600px;
+    top: -250px;
+    right: -170px;
+    background-color: var(--azul-hover);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.login {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.login .c_1 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: -100px;
+    background-color: var(--verde-hover);
+}
+
+.login .c_2 {
+    width: 600px;
+    height: 600px;
+    top: -250px;
+    right: -170px;
+    background-color: var(--verde);
+}
+.btabla .c_1 {
+    width: 300px;
+    height: 300px;
+    bottom: -50px;
+    left: -100px;
+    background-color: var(--verde-hover);
+}
+
+.btabla .c_2 {
+    width: 600px;
+    height: 600px;
+    top: -250px;
+    right: -170px;
+}
+body main {
+    width: 80%;
+    height: 100vh;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: var(--texto);
+}
+
+body main .img {
+    height: 40%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+}
+
+body main .img svg {
+    height: 80%;
+}
+
+body main .formulario {
+    width: 400px ;
+    margin: 60px auto;
+    padding: 50px;
+    height: 300px ;
+    overflow: hidden;
+    background-color: rgba(255,255,255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+}
+
+body main .registro {
+    width: 45%;
+    height: 500px;
+    max-height: 70vh;
+    overflow: auto;
+}
+
+body main .registro form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+body main .registro form .personal,
+body main .registro form .cuenta {
+    width: 45%;
+}
+
+body main .registro form .personal h3,
+body main .registro form .cuenta h3 {
+    padding: 0px 0px 15px 0px;
+}
+
+body main .formulario h1 {
+    text-align: center;
+    padding: 10px 0px 30px 0px;
+}
+
+body main .formulario form {
+    width: 100%;
+}
+
+body main .formulario form input[type="text"],
+body main .formulario form input[type="password"],
+body main .formulario form input[type="date"],
+body main .formulario form input[type="file"],
+body main .formulario form input[type="number"],
+body main .formulario form input[type="email"]  {
+    padding: 10px 10px;
+    margin: 10px 0px; 
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(10,10,10, 0.1);
+    border: 2px solid transparent;
+}
+
+body main .formulario form input[type="text"]:focus,
+body main .formulario form input[type="password"]:focus,
+body main .formulario form input[type="date"]:focus,
+body main .formulario form input[type="number"]:focus,
+body main .formulario form input[type="number"]:focus  {
+    outline: none;
+    border: 2px solid rgba(0,0,0,0.2);
+}
+
+body main .formulario form label {
+    padding: 10px 0px;
+    width: 100%;
+}
+
+body main .formulario form .botones {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0px; 
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+}
+
+body main .formulario form .botones button {
+    padding: 10px 25px; 
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    transition: all .3s;
+    background-color: rgba(0, 98, 204, 0.2);
+    color: var(--azul-hover);
+}
+
+body main .formulario form .botones a {
+    padding: 10px 25px; 
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    color: var(--texto);
+}
+
+body main .formulario form .botones button:hover {
+    padding: 10px 50px;
+    background-color: rgb(0, 98, 204);
+    color: white;
+}
+
+
+body main .formulario form .botones a:hover {
+    background-color: rgba(201, 217, 248, 0.2);
+    text-decoration: underline;
+}
+
+body main .formulario form .botones a,
+body main .formulario form .botones button {
+    font-size: 1em;
+}
+
+#form-login .input .input-error,
+#form-login .input .input-error,
+#form-categoria .input-error,
+#form-ingresarContacto .input-error,
+#form-actualizarContacto .input-error,
+#form-actualizarCategoria .input-error,
+#form-register .input-error,
+#formAgregar .input-error {
+    border: 2px solid var(--rojo);
+}

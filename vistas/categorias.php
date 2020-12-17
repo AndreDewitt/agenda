@@ -11,39 +11,24 @@ require_once "../clases/consultas.php";
 <head>
   <?php require_once "dependencias.php";?>
   <meta charset="utf-8">
-  <title></title>
+  <title>Categorías</title>
 </head>
-<body>
+<body class="btabla">
+  <div class="circle c_1"></div>
+  <div class="circle c_2"></div>
+  <?php require_once "alert/alerts.php"; ?>
+  <?php require_once "modulos/modalCategorias.php"; ?>
+  <?php require_once "modulos/header.php"; ?>
+  
+  <section class="tabla">
+    <div class="titulo">
+        <h2>Categorías</h2>
+        <button class="nuevo add"><i class="material-icons">add</i>Agregar nuevo</button>
+    </div>
+    <div id="cargadatos">
 
-  <a href="../procesos/cerrar.php">Cierralo</a>
-  <a href="categorias.php">Categorías</a>
-  <a href="contactos.php">Contactos</a>
-  <label for=""><?php echo $_SESSION['usuario']; ?></label>
-  <form id="form-categoria">
-      <h2>Formulario</h2>
-      <label for="nombre_categoria"></label>
-      <input type="text" name="nombre_categoria">
-      <label for="descripcion"></label>
-      <textarea name="descripcion" rows="8"></textarea>
-      <label for="color"></label>
-      <input type="text" name="color">
-      <button>Agregar Categoria</button>
-  </form>
-
-  <form id="form-actualizarCategoria">
-      <h2>Formulario</h2>
-      <input type="text" hidden="" name="idCategoria" id="idCategoria">
-      <label for="nombre_categoriaA"></label>
-      <input type="text" name="nombre_categoriaA" id="nombre_categoriaA">
-      <label for="descripcionA"></label>
-      <textarea name="descripcionA" id="descripcionA" rows="8"></textarea>
-      <label for="colorA"></label>
-      <input type="text" name="colorA" id="colorA">
-      <button>Actualizar Categoria</button>
-  </form>
-  <div id="cargadatos">
-
-  </div>
-
+    </div>
+  </section>
+  <?php require_once "modulos/footer.php"; ?>
 </body>
 </html>

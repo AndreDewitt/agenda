@@ -2,11 +2,6 @@
     require_once "../clases/consultas.php";
     $obj = new consultas();
 
-    #idCategoria').val
-    #nombre_categoriaA
-    #descripcionA').va
-    #colorA').val(dato
-
     $datos = array (
         $_POST['idCategoria'],
         $_POST['nombre_categoriaA'],
@@ -14,5 +9,16 @@
         $_POST['colorA']
     );
 
-    echo $obj->actualizarCategoria($datos);
+    if ($datos[0] == '' && $datos[1] == '' && $datos[2] == '') {
+        echo 2;
+    } else if ($datos[1] == '') {
+        echo 3;
+    } else if ($datos[2] == '') {
+        echo 4;
+    } else if ($datos[3] == '') {
+        echo 5;
+    } else {
+        echo $obj->actualizarCategoria($datos);
+    }
+
  ?>

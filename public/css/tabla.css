@@ -1,0 +1,138 @@
+body .add {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px 10px 10px;
+    margin: 0px 0px 20px 0px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--azul-20);
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+    color: white;
+    border: 2px solid var(--verde);
+    transition: all .2s;
+}
+
+body .add:hover {
+    background-color: var(--verde);
+}
+
+body .add:focus {
+    outline: none;
+}
+
+body .add i {
+    padding: 0px 10px 0px 0px;
+}
+
+body .tabla .titulo {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0px 0px 20px 0px;
+}
+
+body .tabla .titulo h2 {
+    padding: 5px 0px 0px 0px;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+
+body .tabla table {
+    width: 100%;
+    padding: 40px;
+    background-color:rgba(255,255,255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+}
+
+body .tabla table thead, 
+body .tabla table tbody, 
+body .tabla table tfoot {
+    width: 100%;
+}
+
+body .tabla table thead tr, 
+body .tabla table tbody tr, 
+body .tabla table tfoot tr {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: none;
+    display: table-row;
+}
+
+body .tabla table thead tr th {
+    border: none;
+    padding: 0px 0px 10px 0px;
+}
+
+body .tabla table tbody tr {
+    border-bottom: 2px solid transparent;
+    transition: all .1s;
+    margin-bottom: 10px;
+}
+
+body .tabla table tbody tr:hover {
+    border-bottom: 2px solid var(--azul);
+}
+
+body .tabla table tbody tr td,
+body .tabla table tfoot tr td {
+    color: var(--texto);
+    align-items: center;
+    border: none;
+    margin: 0;
+    padding: 10px 0px 10px 0px;
+}
+
+body .tabla table thead tr .th,
+body .tabla table tbody tr .td-cat {
+    max-width: calc(50% - 45px) !important;
+}
+
+body .tabla table thead .th-editar, 
+body .tabla table thead .th-eliminar,
+body .tabla table thead .th-color {
+    width: 30px !important;
+}
+
+body .tabla table tbody .td-editar, 
+body .tabla table tbody .td-eliminar, 
+body .tabla table tbody .td-color {
+    width: 60px !important;
+}
+
+body .tabla table tbody tr td .boton {
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+body .tabla table tbody tr td .color_cat {
+    width: 20px;
+    height: 20px;
+    border-radius: var(--radius);
+}
+
+body .tabla table tbody tr td .btn-editar {
+    background-color: var(--naranja);
+}
+
+body .tabla table tbody tr td .btn-editar:hover {
+    background-color: var(--naranja-hover);
+}
+
+body .tabla table tbody tr td .btn-eliminar {
+    background-color: var(--rojo);
+}
+
+body .tabla table tbody tr td .btn-eliminar:hover {
+    background-color: var(--rojo-hover);
+}

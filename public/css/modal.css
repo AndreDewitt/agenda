@@ -1,0 +1,204 @@
+body .modal-form {
+    position: fixed;
+    width: 450px;
+    max-height: 70vh;
+    overflow: auto;
+    left: calc(50% - 250px);
+    top: 18vh;
+    padding: 25px;
+    z-index: 999999;
+    color: var(--texto);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .2s;
+    background-color: rgba(255,255,255, 0.1);
+    border-radius: var(--radius);
+    box-shadow: 0px 0px 60px rgba(0,0,0,0.2);
+    backdrop-filter: blur(5px);
+    box-sizing: border-box;
+    border-radius: var(--radius);
+}
+
+body .abierto {
+    opacity: 1;
+    visibility: visible;
+}
+
+body .modal-form .cerrar {
+    position: absolute;
+    right: 20px;
+    cursor: pointer;
+}
+
+body .modal-form h3 {
+    font-size: 1.2em;
+    padding-bottom: 20px;
+}
+
+body .modal-form form {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+body .modal-form form input[type="text"],
+body .modal-form form input[type="number"],
+body .modal-form form textarea,
+body .modal-form form select,
+body .modal-form form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    background-color: rgba(10,10,10, 0.1);
+}
+
+body .modal-form form textarea {
+    resize: none;
+}
+
+body .modal-form form input[type="text"]:focus,
+body .modal-form form input[type="number"]:focus,
+body .modal-form form textarea:focus,
+body .modal-form form select:focus,
+body .modal-form form input[type="email"]:focus {
+    outline: none;
+    border: 2px solid rgba(0,0,0,0.2);
+}
+
+body .modal-form form label {
+    width: 100%;
+    padding: 10px 0px;
+}
+
+body .modal-form form .color {
+    width: 100%;
+    padding: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 30px;
+}
+
+body .modal-form form .color input[type="radio"] {
+    display: none;
+    position: relative;
+}
+
+body .modal-form form .color input[type="radio"]:checked {
+    display: none;
+    position: relative;
+}
+
+
+body .modal-form form .color input[type="radio"]:checked + .rojo::after {
+    border: 4px solid var(--radio-rojo);
+}
+
+body .modal-form form .color input[type="radio"]:checked + .azul::after {
+    border: 4px solid var(--radio-azul);
+}
+
+body .modal-form form .color input[type="radio"]:checked + .verde::after {
+    border: 4px solid var(--radio-verde);
+}
+
+body .modal-form form .color input[type="radio"]:checked + .naranja::after {
+    border: 4px solid var(--radio-naranja);
+}
+
+body .modal-form form .color input[type="radio"]:checked + .morado::after {
+    border: 4px solid var(--radio-morado);
+}
+
+body .modal-form form .color label {
+    width: 30px;
+    height: 30px;
+    padding: 0px;
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    box-sizing: unset;
+}
+
+body .modal-form form .color label::after {
+    position: absolute;
+    content: "";
+    top: -7px;
+    left: -7px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    transition: all .1s;  
+    box-sizing: unset;
+}
+
+body .modal-form form .color .rojo {
+    background-color: var(--radio-rojo);
+}
+
+body .modal-form form .color .azul {
+    background-color: var(--radio-azul);
+}
+
+body .modal-form form .color .verde {
+    background-color: var(--radio-verde);
+}
+
+body .modal-form form .color .naranja {
+    background-color: var(--radio-naranja);
+}
+
+body .modal-form form .color .morado {
+    background-color: var(--radio-morado);
+}
+
+body .modal-form form .color .rojo::after {
+    border: 3px solid transparent;
+}
+
+body .modal-form form .color .azul::after {
+    border: 4px solid transparent;
+}
+
+body .modal-form form .color .verde::after {
+    border: 4px solid transparent;
+}
+
+body .modal-form form .color .naranja::after {
+    border: 4px solid transparent;
+}
+
+body .modal-form form .color .morado::after {
+    border: 4px solid transparent;
+}
+
+body .modal-form form button {
+    padding: 10px 15px;
+    margin: 20px 0px 0px 0px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: var(--verde);
+    color: white;
+}
+
+body .modal-form form button:hover {
+    background-color: var(--verde-hover);
+    color: white;
+}
+
+body .modal-form #form-actualizarCategoria button {
+    background-color: var(--naranja);
+    color: white;
+}
+
+body .modal-form #form-actualizarCategoria button:hover {
+    background-color: var(--naranja-hover);
+    color: white;
+}
+
+body .modal-form form button:focus {
+    outline: none;
+}
